@@ -7,7 +7,7 @@ else
 fi
 
 if [ -f "$in" ]; then
-    in=$(cat $1)
+    in=$(cat $@)
 fi
 
-sed 'y/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890\!@#\$%\^&\*(){}[]\\|\,.\/<>\?/ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２３４５６７８９０！＠＃＄％＾＆＊（）｛｝[]＼|,.／＜＞？/' <(echo $in)
+sed 'y/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890\!@#\$%\^&\*(){}[]\\|\,.\/<>\?/ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ１２３４５６７８９０！＠＃＄％＾＆＊（）｛｝[]＼|,.／＜＞？/' <(echo "$in")
